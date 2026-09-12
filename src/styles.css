@@ -129,7 +129,7 @@ footer button { border: 0; background: none; text-transform: uppercase; font-siz
   .numbers div { border-bottom: 1px solid var(--line); }
   .project-grid { grid-template-columns: 1fr; }
   .projectvideos-grid { grid-template-columns: 1fr; gap: 32px;}
-  .project-videos {aspect-ratio: 16 / 9;}
+  .project-videos {aspect-ratio: 9/16;}
   .project.offset { margin-top: 0; }
   .project-image { height: 65vw; min-height: 350px; }
   .contact-card { min-height: 420px; padding: 35px; }
