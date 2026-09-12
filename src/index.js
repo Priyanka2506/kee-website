@@ -32,6 +32,11 @@ const projects = [
 
 const projectVideos = [
   {
+    name: "Sirsi",
+    type: "Commercial Sirsi",
+	image: Sirsi
+  },
+  {
     name: "Gadag",
     type: "Commercial Gadag",
 	image: Gadag
@@ -40,12 +45,7 @@ const projectVideos = [
     name: "Nelmangla",
     type: "Commercial Nelmangla",
 	image: Nelmangla
-  },
-  {
-    name: "Sirsi",
-    type: "Commercial Sirsi",
-	image: Sirsi
-  }
+  } 
 ];
 
 const reviews = [
