@@ -5,6 +5,9 @@ import "./styles.css";
 import project1 from './images/Project1.jpg';
 import project2 from './images/Project2.jpg';
 import project3 from './images/Project3.jpg';
+import Gadag from './images/Gadag.mp4';
+import Nelmangla from './images/Nelmangla.mp4';
+import Sirsi from './images/Sirsi.mp4';
 
 const projects = [
   {
@@ -24,6 +27,24 @@ const projects = [
     type: "Residential · Bengaluru",
     //image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85"
 	image: project3
+  }
+];
+
+const projectVideos = [
+  {
+    name: "Gadag",
+    type: "Commercial Gadag",
+	image: Gadag
+  },
+  {
+    name: "Nelmangla",
+    type: "Commercial Nelmangla",
+	image: Nelmangla
+  },
+  {
+    name: "Sirsi",
+    type: "Commercial Sirsi",
+	image: Sirsi
   }
 ];
 
@@ -96,7 +117,7 @@ function App() {
           </div>
 
           <div className="hero-bottom">
-            <span>EST. 2008</span>
+            <span>EST. 2022</span>
             <span>SCROLL TO EXPLORE ↓</span>
           </div>
         </section>
@@ -120,10 +141,10 @@ function App() {
         </section>
 
         <section className="numbers">
-          <div><strong>5+</strong><span>Years of practice</span></div>
+          <div><strong>4+</strong><span>Years of practice</span></div>
           <div><strong>30</strong><span>Projects delivered</span></div>
           <div><strong>5</strong><span>People across the studio</span></div>
-          <div><strong>4</strong><span>Cities we have built in</span></div>
+          <div><strong>5</strong><span>Cities we have built in</span></div>
         </section>
 
         <section className="work section" id="work">
@@ -138,6 +159,27 @@ function App() {
                 <div className="project-image">
                   <img src={project.image} alt={project.name} />
                   <span>0{index + 1}</span>
+                </div>
+                <div className="project-meta">
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.type}</p>
+                  </div>
+                  <ArrowUpRight size={20} />
+                </div>
+              </article>
+            ))}
+          </div>
+		  <div className="projectvideos-grid">
+            {projectVideos.map((project, index) => (
+              <article className={index === 1 ? "project offset" : "project"} key={project.name}>
+                <div className="project-videos">
+                  <video src={project.image} 
+					  controls
+					  muted
+					  playsInline
+					  preload={project.name}
+				  />            
                 </div>
                 <div className="project-meta">
                   <div>
@@ -201,7 +243,7 @@ function App() {
               <p className="eyebrow">Start a conversation</p>
               <h2>Have a space<br /><em>in mind?</em></h2>
             </div>
-            <a className="contact-arrow" href="mailto:hello@ateliernorth.in">
+            <a className="contact-arrow" href="mailto:lokaarchitectsinteriordesign@gmail.com">
               <ArrowUpRight size={35} />
             </a>
           </div>
@@ -213,6 +255,7 @@ function App() {
             </div>
             <div>
               <span>Reach us</span>
+			  <p><b>Ar. Keerthana Lokesh</b>, Founder</p>
               <a href="mailto:lokaarchitectsinteriordesign@gmail.com">lokaarchitectsinteriordesign@gmail.com</a>
               <a href="tel:+917829116958">+91 78 2911 6958</a>
             </div>
